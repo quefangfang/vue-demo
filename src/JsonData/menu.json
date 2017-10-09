@@ -1,0 +1,13 @@
+[
+  {
+    "title":"一级菜单",
+    "mid":"1",
+    "submenu":[
+      {
+        "title":"table示例",
+        "mid":"1.1",
+        "path":"table"
+      }
+    ]
+  }
+]
