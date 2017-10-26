@@ -4,12 +4,16 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+
+import { Loading } from 'element-ui';
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-default/index.css'
 import vueResource from 'vue-resource'
+import Axios from './plugins/axios'
 
 Vue.use(ElementUI)
 Vue.use(vueResource)
+Vue.use(Axios)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -7,6 +7,11 @@
         "title":"table示例",
         "mid":"1.1",
         "path":"table"
+      },
+      {
+        "title":"vuex示例",
+        "mid":"1.2",
+        "path":"storage"
       }
     ]
   }

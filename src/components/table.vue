@@ -59,7 +59,6 @@
 </template>
 
 <script type="text/ecmascript-6">
-  import tableJson from '../JsonData/table.json'
     export default {
         data() {
             return {
@@ -83,7 +82,7 @@
             }
         },
       created(){
-          this.tableData = tableJson;
+        getTableList(this);
       },
       methods:{
         add(formName){
@@ -149,4 +148,12 @@
         }
       }
     }
+  function getTableList(_this){
+    _this.axios('get','static/jsonData/table.json',{},function(response){
+      console.log(response);
+      _this.tableData = response.data;
+    })
+  }
+
+
 </script>

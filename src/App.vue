@@ -25,23 +25,29 @@
 
 <script type="text/ecmascript-6">
   import Head from './components/header'
-  import menuData from './JsonData/menu.json'
+  import store from './store/store'
   export default {
+    store,
+    name: 'app',
     data(){
       return {
         menuList:"",
         activeIndex:"1"
       }
     },
-    name: 'app',
     created(){
-      this.menuList = menuData;
+      getMemuList(this);
     },
     components:{
       "v-header":Head
     }
-
   }
+  function getMemuList(_this){
+    _this.axios('get','static/jsonData/menu.json',{},function(response){
+      _this.menuList = response.data;
+    });
+  }
+
 </script>
 
 <style>
