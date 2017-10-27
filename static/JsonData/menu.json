@@ -12,7 +12,13 @@
         "title":"vuex示例",
         "mid":"1.2",
         "path":"storage"
+      },
+      {
+        "title":"父子通信示例",
+        "mid":"1.3",
+        "path":"parent"
       }
     ]
   }
 ]
+

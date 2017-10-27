@@ -3,8 +3,7 @@ import Router from 'vue-router'
 import Default from '@/components/default'
 import Table from '@/components/Table'
 import Storage from '@/components/storage'
-import store from '../store/store'
-import { Loading } from 'element-ui';
+import Parent from '@/components/parent'
 
 Vue.use(Router)
 
@@ -22,8 +21,14 @@ const routes =  [
       path: '/storage',
       name: 'storage',
       component: Storage
+    },
+    {
+      path: '/parent',
+      name: 'parent',
+      component: Parent
     }
   ];
+
 
 const router = new Router({
   routes

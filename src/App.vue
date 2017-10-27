@@ -90,6 +90,12 @@ html, body, #app {
     flex:1;
   }
   .content-box{
+    height:100%;
+    margin:40px 0;
     padding:10px;
+    overflow: auto;
+  }
+  .modelView{
+    overflow: auto;
   }
 </style>

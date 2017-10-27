@@ -1,8 +1,9 @@
 <style scoped>
   .header{
-    /*position: fixed;*/
-    /*left:230px;*/
-    /*top:0;*/
+    position: fixed;
+    width:100%;
+    left:200px;
+    top:0;
     display: flex;
     align-items: center;
     padding:0 10px;
