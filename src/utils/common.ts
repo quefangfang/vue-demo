@@ -1,5 +1,5 @@
 var Tool = {
-  addZero (val) {
+  addZero(val) {
     val = String(val)
     return val.length < 2 ? '0' + val : val
   }
