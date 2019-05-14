@@ -126,7 +126,7 @@
 
 <script lang='ts'>
 import { Vue, Component, Watch } from 'vue-property-decorator';
-import { TABLE_LIST } from './interface';
+import { TABLE_LIST, TABLE_RULE } from './interface';
 @Component({
   components: {}
 })
@@ -142,11 +142,11 @@ export default class Table extends Vue {
     email: ''
   };
   tableData: Array<TABLE_LIST> = [];
-  rules: {
-    name: [{ required: true; message: '请填写姓名' }];
-    address: [{ required: true; message: '请填写地址' }];
-    phone: [{ required: true; message: '请填写电话' }];
-    email: [{ required: true; type: 'email'; message: '请输入正确的邮箱地址' }];
+  rules: TABLE_RULE = {
+    name: [{ required: true, message: '请填写姓名' }],
+    address: [{ required: true, message: '请填写地址' }],
+    phone: [{ required: true, message: '请填写电话' }],
+    email: [{ required: true, type: 'email', message: '请输入正确的邮箱地址' }]
   };
   created() {
     getTableList(this);
@@ -177,7 +177,6 @@ export default class Table extends Vue {
     _this.formAdd.email = item.email;
   }
   del(item, _index) {
-    console.log(item, _index);
     let _this: any = this;
     _this
       .$confirm('确定删除吗', '删除', {
@@ -219,7 +218,7 @@ export default class Table extends Vue {
 }
 function getTableList(_this) {
   _this.axios('get', 'static/jsonData/table.json', {}, function(response) {
-    console.log(response);
+    // console.log(response);
     _this.tableData = response.data;
   });
 }

@@ -6,3 +6,10 @@ export interface TABLE_LIST {
   phone: string,
   email: string,
 }
+
+export interface TABLE_RULE {
+  name: any[],
+  address: any[],
+  phone: any[],
+  email: any[],
+}
