@@ -1,5 +1,5 @@
 export interface TABLE_LIST {
-  id: number,
+  id?: number,
   name: string,
   sex: string,
   address: string,

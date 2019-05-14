@@ -126,21 +126,20 @@
 
 <script lang='ts'>
 import { Vue, Component, Watch } from 'vue-property-decorator';
-import { Message } from 'element-ui';
 import { TABLE_LIST } from './interface';
 @Component({
   components: {}
 })
 export default class Table extends Vue {
-  fromAddVisible: Boolean = false;
-  isEdit: Boolean = false;
-  editIndex: 0;
-  formAdd: {
-    name: '';
-    sex: 'male';
-    address: '';
-    phone: '';
-    email: '';
+  fromAddVisible: boolean = false;
+  isEdit: boolean = false;
+  editIndex: number = 0;
+  formAdd: TABLE_LIST = {
+    name: '',
+    sex: 'male',
+    address: '',
+    phone: '',
+    email: ''
   };
   tableData: Array<TABLE_LIST> = [];
   rules: {
@@ -152,7 +151,6 @@ export default class Table extends Vue {
   created() {
     getTableList(this);
   }
-
   add(formName: string) {
     let _this = this;
     _this.isEdit = false;
