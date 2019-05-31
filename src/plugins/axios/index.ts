@@ -41,7 +41,7 @@ export default function (Vue) {
 		created: function () {
 			var _this = this;
 			_this.axios = function (type, url, params, sfn, efn) {
-				var opts: AXIOS_PARAMS = {
+				var opts: any = {
 					method: type,
 					url: url,
 					headers: {
